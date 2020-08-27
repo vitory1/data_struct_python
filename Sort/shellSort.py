@@ -8,15 +8,12 @@ def shellSort(alist):
 
 
 def gapInsertionSort(alist, start, gap):
-    for i in range(start+gap, len(alist), gap):
-
-        currentValue = alist[i]
-        position = i
-
-        while position >= gap and alist[position-gap] > currentValue:
+    for fillsolt in range(start+gap, len(alist), gap):
+        currentValue = alist[fillsolt]
+        position = fillsolt
+        while position > 0 and alist[position-gap] > currentValue:
             alist[position] = alist[position-gap]
             position = position - gap
-
         alist[position] = currentValue
 
 
